@@ -2,6 +2,27 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+# 🤖 AI Recruiter Agent
+
+An AI-powered recruitment assistant that automates technical and HR interviews using **voice-based interaction**.  
+Recruiters can create custom job interviews, share interview links, and get detailed candidate feedback — all without being physically present.  
+
+---
+
+## ✨ Features
+- 🔹 Recruiter inputs **job role, interview duration, and type of interview**
+- 🔹 System automatically generates a **set of tailored questions**
+- 🔹 Unique **interview link** is generated and can be shared with candidates
+- 🔹 **Voice AI Agent** conducts the interview (no video, only voice)
+- 🔹 Provides a **detailed feedback report** about the candidate’s performance
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend & Backend**: Next.js (React framework)
+- **AI/Voice Agent**: Vapi integration
+- **Database**: supabase
+- **Deployment**: Vercel
 
 First, run the development server:
 
