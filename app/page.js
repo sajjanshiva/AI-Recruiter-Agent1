@@ -2,28 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { supabase } from '@/services/supabaseClient'
-import { useRouter } from 'next/navigation'
-
 
 const HomePage = () => {
-
-
-   const router = useRouter()
-
-  // Redirect logged-in users to dashboard
-  useEffect(() => {
-    const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-
-      if (session) {
-        router.push('/dashboard')
-      }
-    }
-
-    checkSession()
-  }, [router])
-
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
