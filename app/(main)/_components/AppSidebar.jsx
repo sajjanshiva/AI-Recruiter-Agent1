@@ -27,7 +27,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="flex flex-col items-center gap-4 mt-5">
         <Image
-          src="/logo3.png"
+          src="/logo45.png"
           alt="logo"
           width={200}
           height={100}
