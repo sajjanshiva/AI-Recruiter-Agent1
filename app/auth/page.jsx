@@ -9,7 +9,6 @@ function Login() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
 
-  // Check if user is already authenticated on component mount
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser()
@@ -20,36 +19,19 @@ function Login() {
     checkUser()
   }, [router])
 
-  // Listen for auth state changes
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        if (event === 'SIGNED_IN' && session) {
-          console.log('User signed in successfully:', session.user)
-          router.push('/dashboard')
-        }
-      }
-    )
-
-    return () => subscription.unsubscribe()
-  }, [router])
-
   const signINWithGoogle = async () => {
     try {
       setLoading(true)
-      const { data, error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/dashboard`
+          redirectTo: `${window.location.origin}/auth/callback`
         }
       })
 
       if (error) {
         console.log('Error:', error.message)
         setLoading(false)
-      } else {
-        console.log("Sign in data:", data)
-        // Note: The redirect will be handled by the auth state change listener
       }
     } catch (err) {
       console.error('Unexpected error:', err)
@@ -67,7 +49,6 @@ function Login() {
           height={100}
           className='w-[180px]'
         />
-        
         <div className='flex flex-col items-center'>
           <Image 
             src={"/login.png"} 
