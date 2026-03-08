@@ -5,19 +5,6 @@ import Link from 'next/link';
 import { supabase } from '@/services/supabaseClient'
 import { useRouter } from 'next/navigation'
 
-const router = useRouter()
-
-useEffect(() => {
-  const checkSession = async () => {
-    const { data: { session } } = await supabase.auth.getSession()
-
-    if (session) {
-      router.push('/dashboard')
-    }
-  }
-
-  checkSession()
-}, [])
 
 const HomePage = () => {
 
@@ -37,7 +24,7 @@ const HomePage = () => {
     checkSession()
   }, [router])
 
-  
+
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
