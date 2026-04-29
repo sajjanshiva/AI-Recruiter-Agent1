@@ -8,7 +8,8 @@ import { toast } from 'sonner'
 
 function InterviewLink({ interview_id, formData}) {
     
-    const url=process.env.NEXT_PUBLIC_HOST_URL+'/'+interview_id
+    const url = process.env.NEXT_PUBLIC_HOST_URL + '/interview/' + interview_id
+// Builds: https://ai-recruiter-agent1.vercel.app/interview/7eb1d4a9-...  ✅
     const GetInterviewUrl=()=>{
         return url;
   }

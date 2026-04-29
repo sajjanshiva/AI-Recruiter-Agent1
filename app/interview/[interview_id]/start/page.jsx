@@ -222,7 +222,7 @@ function StartInterview() {
 
   return (
     <div className='p-20 lg:px-48 xl:px-56'>
-      <h2 className='font-bold text-xl flex justify-between'>AI Interview Sesstion
+      <h2 className='font-bold text-xl flex justify-between'>AI Interview Session
 
         <span className='flex items-center gap-2'>
           {/* <Timer /> 
