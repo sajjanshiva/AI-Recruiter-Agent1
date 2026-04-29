@@ -57,9 +57,9 @@ function StartInterview() {
             language: "en-US",
           },
           voice: {
-            provider: "playht",
-            voiceId: "jennifer",
-          },
+         provider: "cartesia",
+         voiceId: "79a125e8-cd45-4c13-8a67-188112f4dd22",
+         },
           model: {
             provider: "openai",
             model: "gpt-4",
