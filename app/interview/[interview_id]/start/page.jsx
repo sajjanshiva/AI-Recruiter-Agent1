@@ -9,7 +9,7 @@ import axios from 'axios';
 import { supabase } from '@/services/supabaseClient';
 import { useParams, useRouter } from 'next/navigation';
 
-const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_API_KEY);
+const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY);
 
 function StartInterview() {
     const { interviewInfo, setInterviewInfo } = useContext(InterviewDataContext);
